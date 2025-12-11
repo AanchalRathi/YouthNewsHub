@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth News Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <h1>Youth News Hub</h1>
+
+      <nav>
+        <a href="#" data-category="top" class="active">Home</a>
+        <a href="#" data-category="politics">Politics</a>
+        <a href="#" data-category="business">Finance</a>
+        <a href="#" data-category="technology">Tech</a>
+        <a href="#" data-category="entertainment">Culture</a>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+      </nav>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles...">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader" style="display: none;">
+      <div class="spinner"></div>
+      <p>Fetching the latest news…</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="news-section">
+      <h2>Top Stories</h2>
+      <p id="last-updated" style="font-size: 0.9rem; color: gray;"></p>
+      <div id="news-container" class="news-grid"></div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Trending Topics</h2>
+      <ul>
+        <li><a href="#">Elections 2025</a></li>
+        <li><a href="#">AI in Education</a></li>
+        <li><a href="#">Startups to Watch</a></li>
+        <li><a href="#">Climate Policy</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Youth News Hub | All rights reserved</p>
+  </footer>
+
+  <!-- ⭐ FINAL MODAL (Only One Modal Exists Now) -->
+  <div id="article-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <img id="modal-image" src="" alt="" style="width:100%; border-radius:10px; margin-bottom:10px; display:none;">
+
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+
+      <p id="modal-source" style="font-weight:bold; margin-top:10px;"></p>
+      <p id="modal-time" style="color:#777; margin-top:-5px;"></p>
+
+      <a id="modal-link" href="#" target="_blank" class="modal-read-more">
+        Read full article →
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
